@@ -1,29 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp">
-
-    <EditText
-        android:id="@+id/editTextEuro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Masukkan jumlah Euro"
-        android:inputType="numberDecimal" />
-
-    <Button
-        android:id="@+id/buttonConvert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Konversi" />
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="#FFFFFF">
 
     <TextView
-        android:id="@+id/textViewResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Hasil akan tampil di sini"
-        android:textSize="18sp" />
+        android:text="Masukkan jumlah"
+        android:labelFor="@id/inputAmount"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/inputAmount"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Contoh: 100"
+        android:inputType="numberDecimal"
+        android:importantForAccessibility="yes"
+        android:autofillHints="number"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mode konversi (1=Euro→Rp, 2=Rp→Euro)"
+        android:labelFor="@id/inputMode"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/inputMode"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Masukkan 1 atau 2"
+        android:inputType="number"
+        android:importantForAccessibility="yes"
+        android:autofillHints="text"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Konversi"
+        android:minHeight="48dp"
+        android:layout_marginTop="16dp"/>
 </LinearLayout>

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">TugasMDP</string>
+    <string name="label_amount">Masukkan jumlah</string>
+    <string name="hint_amount">Contoh: 100</string>
+    <string name="desc_amount">Field jumlah uang</string>
+    <string name="label_mode">Mode konversi (1=Euro→Rp, 2=Rp→Euro)</string>
+    <string name="hint_mode">Masukkan 1 atau 2</string>
+    <string name="desc_mode">Field mode konversi</string>
+    <string name="button_convert">Konversi</string>
 </resources>
